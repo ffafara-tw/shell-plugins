@@ -1,0 +1,9 @@
+npmScopes:
+  company:
+    npmAlwaysAuth: true
+    npmAuthToken: "npm_EXAMPLE_company_token"
+    npmRegistryServer: "https://npm.private.registry.com"
+  envref:
+    npmAuthToken: "${ENVREF_NPM_AUTH_TOKEN:-}"
+  other:
+    npmAuthToken: "npm_EXAMPLE_other_token"

@@ -15,6 +15,9 @@ func yarnCLI() schema.Executable {
 		NeedsAuth: needsauth.IfAll(
 			needsauth.NotForHelpOrVersion(),
 			needsauth.NotWithoutArgs(),
+			needsauth.IfAny(
+				needsauth.ForCommand("install"),
+			),
 		),
 		Uses: []schema.CredentialUsage{
 			{
